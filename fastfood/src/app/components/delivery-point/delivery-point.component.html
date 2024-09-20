@@ -1,0 +1,10 @@
+<div>
+<h2>Componente Delivery Point</h2>
+<h3>Pedidos Listos para Entregar</h3>
+<ul>
+    <li *ngFor="let pedido of pedidoService.pedidosListos">
+        {{pedido.number}} - {{pedido.description}} 
+        <button (click)="onEntregarPedido(pedido)">Entregar</button>
+    </li>
+</ul>
+</div>

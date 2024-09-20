@@ -1,0 +1,12 @@
+<div>
+    <h2>Componente Point of Sell - POS</h2>
+    <form #pedidoForm="ngForm" (ngSubmit)="onAgregarPedido()">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" [(ngModel)]="nombreCliente" required />
+        <br>
+        <label for="description">Pedido</label>
+        <input type="text" id="description" name="description" [(ngModel)]="descripcionPedido" required />
+        <br>
+        <button type="submit" [disabled]="pedidoForm.invalid">Ordenar</button>
+    </form>
+</div>

@@ -1,0 +1,18 @@
+<div>
+<h2>Componente Cocina</h2>
+<h3>Pendientes de Cocinar</h3>
+<ul>
+    <li *ngFor="let pedido of pedidoService.pedidosPendientes">
+        {{pedido.number}} - {{pedido.description}} 
+        <button (click)="onTomarPedido(pedido)" [disabled]="pedidoService.hayPedidoEnCoccion">Cocinar</button>
+    </li>
+</ul>
+
+<h3>En Cocción</h3>
+<ul>
+    <li *ngFor="let pedido of pedidoService.pedidosEnCoccion">
+        {{pedido.number}} - {{pedido.description}} 
+        <button (click)="onTerminarCoccion(pedido)">Terminar</button>
+    </li>
+</ul>
+<div>
